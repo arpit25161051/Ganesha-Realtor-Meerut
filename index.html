@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ganesha Realtor | Ultra-Luxury Real Estate</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Ganesha Realtor</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-box">
+    <h1>Where <span>Luxury</span><br>Meets Legacy</h1>
+    <p>Exclusive villas, signature residences & elite investment opportunities curated for discerning buyers.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/9650263015" class="btn gold"><i class="fa-brands fa-whatsapp"></i> Private Consultation</a>
+      <a href="#properties" class="btn outline">View Estates</a>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <div class="stats">
+    <div class="stat"><h3>₹100Cr+</h3><p>Assets Sold</p></div>
+    <div class="stat"><h3>700+</h3><p>Elite Clients</p></div>
+    <div class="stat"><h3>12+</h3><p>Years Legacy</p></div>
+    <div class="stat"><h3>100%</h3><p>Confidential Deals</p></div>
+  </div>
+</section>
+
+<section id="properties">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our <span>Properties</span></h2>
+      <p>Hand-selected ultra-luxury properties</p>
+    </div>
+    <div class="properties">
+      <div class="property"><img src="images/paras-estate.jpg.jpg" alt="Paras Estate"><div class="info"><h3>Paras Estate</h3><p class="price">₹1.25L*</p>Sq.Yard</div></div>
+      <div class="property"><img src="images/dwaarika.png.jpeg" alt="Dwaarika Heights"><div class="info"><h3>Dwaarika Heights</h3><p class="price">₹61.75L*</p>Starting Price</div></div>
+      <div class="property"><img src="images/Keshav.png.png" alt="Keshav Kunj"><div class="info"><h3>Keshav Kunj</h3><p class="price">₹20K*</p>Sq.Yard</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2><span>Services</span></h2>
+      <p>Top-notch real estate services</p>
+    </div>
+    <div class="services">
+      <div class="service"><i class="fa-solid fa-key"></i><h3>Private Acquisitions</h3><p>Off-market luxury listings</p></div>
+      <div class="service"><i class="fa-solid fa-shield"></i><h3>Confidential Sales</h3><p>Discreet & secure transactions</p></div>
+      <div class="service"><i class="fa-solid fa-gem"></i><h3>Investment Advisory</h3><p>High-value portfolio growth</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & WhatsApp Form -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Request a Private Viewing</h2>
+      <p>Fill the form below to chat with our property advisor directly on WhatsApp</p>
+    </div>
+
+    <form id="whatsappForm" style="max-width:600px;margin:auto;display:flex;flex-direction:column;gap:20px;">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="tel" id="phone" placeholder="Your Phone Number" required>
+      <input type="text" id="property" placeholder="Property Interested In" required>
+      <textarea id="message" placeholder="Additional Message (optional)" rows="4"></textarea>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>© 2025 Ganesha Realtor — Developed By Marketrit Consulting </footer>
+<a href="https://wa.me/9650263015" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+
+<script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = encodeURIComponent(document.getElementById('name').value);
+  const phone = encodeURIComponent(document.getElementById('phone').value);
+  const property = encodeURIComponent(document.getElementById('property').value);
+  const message = encodeURIComponent(document.getElementById('message').value);
+
+  let whatsappMessage = `Hello Ganesha Realtor,%0A%0AName: ${name}%0APhone: ${phone}%0AProperty: ${property}`;
+  if(message) {
+    whatsappMessage += `%0AMessage: ${message}`;
+  }
+
+  const whatsappURL = `https://wa.me/9650263015?text=${whatsappMessage}`;
+  window.open(whatsappURL, '_blank');
+});
+</script>
+</body>
+</html>
